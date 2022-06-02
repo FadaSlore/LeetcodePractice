@@ -1,12 +1,15 @@
-# Leetcode
 
-## [<font color=orange>450. Delete Node in a BST</font>](/Problems/450_Delete_Node_in_a_BST.cpp)
-- 給定一個二元樹根節點`root`與一數`key`，若`key`存在於此二元數內，則刪除並重組二元樹，回傳新的根節點
-- 技巧：回溯法，在過程中記錄所尋找的點的**父節點**
-    1. 對`key`節點**右**子樹的所有節點尋找最小值節點（最**左**葉節點）
-    2. 對`key`節點**左**子樹的所有節點尋找最大值節點（最**右**葉節點）
-    - 需注意的是，當`change_parent`（上述之父節點）與`key`節點（`target`）為同一個節點時，轉換的左右子樹會不同
-```cpp
+// Definition for a binary tree node.
+struct TreeNode
+{
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+
 class Solution
 {
 public:
@@ -65,19 +68,3 @@ public:
         return root;
     }
 };
-```
-
-## [<font color=green>867. Transpose Matrix</font>](/Problems/867_Transpose_Matrix.cpp)
-- 給定矩陣`matrix`，輸出轉置（transpose）矩陣
-```cpp
-class Solution {
-public:
-    vector<vector<int>> transpose(vector<vector<int>>& matrix) {
-        vector<vector<int>> result(matrix[0].size(), vector<int>(matrix.size()));
-        for (int i = 0;i<matrix[0].size();i++)
-            for (int j = 0; j < matrix.size();j++)
-                result[i][j] = matrix[j][i];
-        return result;
-    }
-};
-```
