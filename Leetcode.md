@@ -7,6 +7,8 @@
 ## [304. Range Sum Query 2D - Immutable](/Problems/304_Range_Sum_Query_2D_Immutable.cpp)
 - 相關題：[303](#303-range-sum-query---immutable)
 - 給定一數組`matrix`，實現求**區域**和的 function
+- 技巧：預先計算好**二維**前綴和，再根據給的行列 index 求出對應值
+    - 注意更新及回傳的加減（加上沒有的、減去重疊的）— 集合概念
 
 ## [450. Delete Node in a BST](/Problems/450_Delete_Node_in_a_BST.cpp)
 - 給定一個二元樹根節點`root`與一數`key`，若`key`存在於此二元數內，則刪除並重組二元樹，回傳新的根節點
