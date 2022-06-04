@@ -1,6 +1,6 @@
 # Leetcode
 
-## [303. Range Sum Query - Immutable](/Problems/303_Range_Sum_Query_Immutable.cpp)
+## [303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) - [Solution](/Problems/303_Range_Sum_Query_Immutable.cpp)
 - 給定一數組`nums`，實現求**區間**和的 function
 - 技巧：預先計算好所有前綴和，再根據給的 index 求出對應值
 
@@ -24,3 +24,10 @@
 
 ## [867. Transpose Matrix](/Problems/867_Transpose_Matrix.cpp)
 - 給定矩陣`matrix`，輸出轉置（transpose）矩陣
+
+## [929. Unique Email Addresses](https://leetcode.com/problems/unique-email-addresses/) - [Solution](/Problems/929_Unique_Email_Addresses.cpp)
+- 給定一組郵件地址`emails`，判斷其中有多少個不同的地址
+    - 郵件地址分為`local`與`domain`
+        - `local`：由英文小寫字母與`.`、`+`組成，遇`.`忽略，遇`+`忽略其後所有字母符號
+        - `domain`：由英文小寫字母與`.`組成，組成不同則不同
+
