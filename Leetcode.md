@@ -1,5 +1,21 @@
 # Leetcode
 
+
+## [51. N-Queens](https://leetcode.com/problems/n-queens/) - [Solution]()
+- 給定`n`，輸出以`n*n`為棋盤的皇后棋擺放法
+    - 皇后棋擺放法：同一行、列、斜角不能存在兩個皇后棋
+- 技巧：
+    - 注意到`1 <= n <= 9`：可以使用`int`儲存棋盤擺放狀態
+    - 因為按照`row`枚舉，需要儲存的狀態有：`columns`、`diagonals_forward`、`diagonals_backward`
+    - 計算對當前狀態的可放位置，等同於對下列兩項取 AND（`&`）：
+        - `(1<<n)-1`（即，有`n`個`1`）
+        - 上述三個儲存狀態（`columns`、`diagonals_forward`、`diagonals_backward`）沒佔用的位置：取非（`~`）
+    - 列舉可以放的位置：
+        - `x&(-x)`：獲得`x`的二進制表示中最低位`1`的位置
+            - 該位置即為當前`row`中皇后棋要放的`column`值
+        - `x&(x-1)`：將`x`二進制表示中最低位`1`變為`0`
+
+
 ## [303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) - [Solution](/Problems/303_Range_Sum_Query_Immutable.cpp)
 - 給定一數組`nums`，實現求**區間**和的 function
 - 技巧：預先計算好所有前綴和，再根據給的 index 求出對應值
