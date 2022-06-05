@@ -37,6 +37,12 @@
     2. 對`key`節點**左**子樹的所有節點尋找最大值節點（最**右**葉節點）
     - 需注意的是，當`change_parent`（上述之父節點）與`key`節點（`target`）為同一個節點時，轉換的左右子樹會不同
 
+## [478. Generate Random Point in a Circle](https://leetcode.com/problems/generate-random-point-in-a-circle/) - [Solution](/Problems/478.%20Generate%20Random%20Point%20in%20a%20Circle.cpp)
+- 給定圓的半徑和圓心位置，實現產生圓內均勻隨機點的函式
+- 技巧：`<random>`
+    - `mt19937`：[梅森旋轉算法](https://zh.wikipedia.org/zh-tw/%E6%A2%85%E6%A3%AE%E6%97%8B%E8%BD%AC%E7%AE%97%E6%B3%95) - 偽隨機數產生演算法
+    - `uniform_real_distribution`
+
 ## [829. Consecutive Numbers Sum](https://leetcode.com/problems/consecutive-numbers-sum/) - [Solution](/Problems/829_Consecutive_Numbers_Sum.cpp)
 - 給定一數`n`，求連續正整數和為`n`的組數
 - 技巧：從`x`到`x+k-1`（`k`個數），和為`n`
