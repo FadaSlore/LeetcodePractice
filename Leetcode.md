@@ -20,6 +20,14 @@
 - 相關題： [51. N-Queens](#51-n-queens---solution)
     - 改為回傳數量
 
+## [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) - [Solution](/Problems/160.%20Intersection%20of%20Two%20Linked%20Lists.cpp)
+- 給定兩個 list 的 head：`headA`、`headB`，回傳相交的起始點，若無相交則回傳`NULL`
+- 技巧：雙指針（`a`、`b`），到尾則從另一個的 list 的`head`再繼續。假設`ListA`長度為`m`、`ListB`長度為`n`：
+        1.  `ListA`與`ListB`**有相交**，相交長度為`c`，則令`a+c=m`、`b+c=n`：`a`、`b`各走`a+b+c`次 → `a=b`
+        2.  `ListA`與`ListB`**沒有相交**：
+            1.  `m=n`：`a`、`b`各走`m=n`次 → `a=b=NULL`
+            2.  `m!=n`：`a`、`b`各走`m+n`次 → `a=b=NULL`
+
 ## [303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) - [Solution](/Problems/303_Range_Sum_Query_Immutable.cpp)
 - 給定一數組`nums`，實現求**區間**和的 function
 - 技巧：預先計算好所有前綴和，再根據給的 index 求出對應值
