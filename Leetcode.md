@@ -51,6 +51,10 @@
     - `mt19937`：[梅森旋轉算法](https://zh.wikipedia.org/zh-tw/%E6%A2%85%E6%A3%AE%E6%97%8B%E8%BD%AC%E7%AE%97%E6%B3%95) - 偽隨機數產生演算法
     - `uniform_real_distribution`
 
+## [732. My Calendar III](https://leetcode.com/problems/my-calendar-iii/) - [Solution](/Problems/732.%20My%20Calendar%20III.cpp)
+- 給一組預定時間，對每一個`[start, end)`輸出當前所有預定時間的最大同時預定數量
+- 技巧：`map`，對`start`加一、對`end`減一
+
 ## [829. Consecutive Numbers Sum](https://leetcode.com/problems/consecutive-numbers-sum/) - [Solution](/Problems/829_Consecutive_Numbers_Sum.cpp)
 - 給定一數`n`，求連續正整數和為`n`的組數
 - 技巧：從`x`到`x+k-1`（`k`個數），和為`n`
