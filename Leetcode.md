@@ -20,6 +20,11 @@
 - 相關題： [51. N-Queens](#51-n-queens---solution)
     - 改為回傳數量
 
+## [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) - [Solution](/Problems/88.%20Merge%20Sorted%20Array.cpp)
+- 給定已排序的數組`nums1`、`nums2`與各自的元素數量`m`、`n`，合併`nums2`到`nums1`
+    - 給定的`nums1`長度為`m+n`
+- 技巧：逆向雙指針
+
 ## [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) - [Solution](/Problems/160.%20Intersection%20of%20Two%20Linked%20Lists.cpp)
 - 給定兩個 list 的 head：`headA`、`headB`，回傳相交的起始點，若無相交則回傳`NULL`
 - 技巧：雙指針（`a`、`b`），到尾則從另一個的 list 的`head`再繼續。假設`ListA`長度為`m`、`ListB`長度為`n`：
