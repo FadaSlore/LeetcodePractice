@@ -63,6 +63,12 @@
 ## [867. Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) - [Solution](/Problems/867_Transpose_Matrix.cpp)
 - 給定矩陣`matrix`，輸出轉置（transpose）矩陣
 
+## [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) - [Solution](/Problems/875.%20Koko%20Eating%20Bananas.cpp)
+- 給定數列`piles`與`h`，`piles[i]`代表第`i`堆香蕉數量。每小時可吃`k`根香蕉，吃完一堆後下一小時才可吃下一堆。求在`h`小時內吃完所有香蕉的最小`k`值。
+- 技巧：二分查找
+    - 對每一次更新速度`speed`，計算吃完所需時間，若`<=h`則更新`high`，否則更新`low`
+
+
 ## [929. Unique Email Addresses](https://leetcode.com/problems/unique-email-addresses/) - [Solution](/Problems/929_Unique_Email_Addresses.cpp)
 - 給定一組郵件地址`emails`，判斷其中有多少個不同的地址
     - 郵件地址分為`local`與`domain`
