@@ -79,7 +79,11 @@
         - `local`：由英文小寫字母與`.`、`+`組成，遇`.`忽略，遇`+`忽略其後所有字母符號
         - `domain`：由英文小寫字母與`.`組成，組成不同則不同
 
-## [1037. Valid Boomerang](https://leetcode.com/problems/valid-boomerang/)
+## [1037. Valid Boomerang](https://leetcode.com/problems/valid-boomerang/) - [Solution](/Problems/1037.%20Valid%20Boomerang.cpp)
 - 給定一個點數組`points`，分別代表`x-y`平面上的座標，判斷三點是否不在同一線上
 - 技巧：座標比例判斷
 
+## [1332. Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/) - [Solution](/Problems/1332.%20Remove%20Palindromic%20Subsequences.cpp)
+- 給定一個僅由`a`、`b`組成的字串`s`，判斷最少需要移除幾個**回文子字串**才能使`s`變為空字串
+    - 子字串：**不改變順序**下刪除字符形成的字串
+- 技巧：由於只包含兩種字符，最多只需要刪除兩次（分別刪除同字符組成的子字串）
