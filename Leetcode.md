@@ -73,10 +73,13 @@
 - 技巧：二分查找
     - 對每一次更新速度`speed`，計算吃完所需時間，若`<=h`則更新`high`，否則更新`low`
 
-
 ## [929. Unique Email Addresses](https://leetcode.com/problems/unique-email-addresses/) - [Solution](/Problems/929_Unique_Email_Addresses.cpp)
 - 給定一組郵件地址`emails`，判斷其中有多少個不同的地址
     - 郵件地址分為`local`與`domain`
         - `local`：由英文小寫字母與`.`、`+`組成，遇`.`忽略，遇`+`忽略其後所有字母符號
         - `domain`：由英文小寫字母與`.`組成，組成不同則不同
+
+## [1037. Valid Boomerang](https://leetcode.com/problems/valid-boomerang/)
+- 給定一個點數組`points`，分別代表`x-y`平面上的座標，判斷三點是否不在同一線上
+- 技巧：座標比例判斷
 
