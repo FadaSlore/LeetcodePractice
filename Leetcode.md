@@ -33,6 +33,9 @@
             1.  `m=n`：`a`、`b`各走`m=n`次 → `a=b=NULL`
             2.  `m!=n`：`a`、`b`各走`m+n`次 → `a=b=NULL`
 
+## [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) - [Solution](/Problems/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted.cpp)
+- 給定數組`numbers`與一數`target`，回傳`numbers`中兩數和為`target`的 index：**唯一解**
+
 ## [303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) - [Solution](/Problems/303_Range_Sum_Query_Immutable.cpp)
 - 給定一數組`nums`，實現求**區間**和的 function
 - 技巧：預先計算好所有前綴和，再根據給的 index 求出對應值
