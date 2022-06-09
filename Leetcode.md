@@ -59,6 +59,12 @@
     - `mt19937`：[梅森旋轉算法](https://zh.wikipedia.org/zh-tw/%E6%A2%85%E6%A3%AE%E6%97%8B%E8%BD%AC%E7%AE%97%E6%B3%95) - 偽隨機數產生演算法
     - `uniform_real_distribution`
 
+## [497. Random Point in Non-overlapping Rectangles](https://leetcode.com/problems/random-point-in-non-overlapping-rectangles/) - [Solution](/Problems/497.%20Random%20Point%20in%20Non-overlapping%20Rectangles.cpp)
+- 給定一組矩形`rects`，`rects[i]=(a, b, x, y)`，`(a, b)`代表左下角座標、`(x, y)`代表右上角座標，`pick`：等機率輸出矩形範圍內的點
+- 技巧：前綴和＋二分查找
+    - 第`i`個矩形內的點有`(x-a+1)*(y-b+1)`個，根據此對每個點編號
+    - 根據前綴和找出隨機選取的數對應的矩形，再計算座標位置
+
 ## [732. My Calendar III](https://leetcode.com/problems/my-calendar-iii/) - [Solution](/Problems/732.%20My%20Calendar%20III.cpp)
 - 給一組預定時間，對每一個`[start, end)`輸出當前所有預定時間的最大同時預定數量
 - 技巧：`map`，對`start`加一、對`end`減一
