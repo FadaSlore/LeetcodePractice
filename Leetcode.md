@@ -25,6 +25,12 @@
     - 給定的`nums1`長度為`m+n`
 - 技巧：逆向雙指針
 
+## [120. Triangle](https://leetcode.com/problems/triangle/) - [Solution](/Problems/120.%20Triangle.cpp)
+- 給定一個三角形數組`triangle`（每一層都比上一層多一個數），求出從頂走到底的最小花費
+- 技巧：動態規劃
+    - 每一層的第`j`個位置只和下一層的第`j`、`j+1`有關
+    - 優化：由底向頂更改給定的變數`triangle`，空間複雜度為`0`
+
 ## [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) - [Solution](/Problems/160.%20Intersection%20of%20Two%20Linked%20Lists.cpp)
 - 給定兩個 list 的 head：`headA`、`headB`，回傳相交的起始點，若無相交則回傳`NULL`
 - 技巧：雙指針（`a`、`b`），到尾則從另一個的 list 的`head`再繼續。假設`ListA`長度為`m`、`ListB`長度為`n`：
@@ -91,6 +97,10 @@
 ## [1037. Valid Boomerang](https://leetcode.com/problems/valid-boomerang/) - [Solution](/Problems/1037.%20Valid%20Boomerang.cpp)
 - 給定一個點數組`points`，分別代表`x-y`平面上的座標，判斷三點是否不在同一線上
 - 技巧：座標比例判斷
+
+## [1051. Height Checker](https://leetcode.com/problems/height-checker/)
+- 對給定數組`heights`，輸出原數組與排序後數組不同位置的元素數量
+- 技巧：注意`1 <= heights[i] <= 100`，直接使用`vector`存取所有高度數量
 
 ## [1332. Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/) - [Solution](/Problems/1332.%20Remove%20Palindromic%20Subsequences.cpp)
 - 給定一個僅由`a`、`b`組成的字串`s`，判斷最少需要移除幾個**回文子字串**才能使`s`變為空字串
