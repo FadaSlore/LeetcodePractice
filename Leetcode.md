@@ -71,6 +71,12 @@
     - 第`i`個矩形內的點有`(x-a+1)*(y-b+1)`個，根據此對每個點編號
     - 根據前綴和找出隨機選取的數對應的矩形，再計算座標位置
 
+## [719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/) - [Solution](Problems/719.%20Find%20K-th%20Smallest%20Pair%20Distance.cpp)
+- 給定數組`nums`與一數`k`，輸出其中第`k`小的數對差
+    - 數對差：`nums`中選取兩數的距離
+- 技巧：排序後，二分查找＋雙指針
+    - 對每一個`mid`，計算小於`mid`的數對差有幾個
+
 ## [732. My Calendar III](https://leetcode.com/problems/my-calendar-iii/) - [Solution](/Problems/732.%20My%20Calendar%20III.cpp)
 - 給一組預定時間，對每一個`[start, end)`輸出當前所有預定時間的最大同時預定數量
 - 技巧：`map`，對`start`加一、對`end`減一
@@ -97,6 +103,12 @@
 ## [1037. Valid Boomerang](https://leetcode.com/problems/valid-boomerang/) - [Solution](/Problems/1037.%20Valid%20Boomerang.cpp)
 - 給定一個點數組`points`，分別代表`x-y`平面上的座標，判斷三點是否不在同一線上
 - 技巧：座標比例判斷
+
+## [1048. Longest String Chain](https://leetcode.com/problems/longest-string-chain/) - [Solution](/Problems/1048.%20Longest%20String%20Chain.cpp)
+- 給定一串字符`words`，判斷可以由其中元素組成的字符串最長長度
+    - 若可以在不改變字符順序的前提下，對`words[a]`插入一個字符使其變為`words[b]`，則稱`words[a]`為`words[b]`的前身
+- 技巧：排序後，動態規劃＋雙指針
+
 
 ## [1051. Height Checker](https://leetcode.com/problems/height-checker/)
 - 對給定數組`heights`，輸出原數組與排序後數組不同位置的元素數量
