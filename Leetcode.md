@@ -1,6 +1,12 @@
 # Leetcode
 
 
+## [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) - [Solution](/Problems/5.%20Longest%20Palindromic%20Substring.cpp)
+- 給定字串`s`，找出其中最長的回文字串
+- 技巧：
+    1. 動態規劃＋中心擴展
+    2. [Manacher 算法](https://zh.wikipedia.org/wiki/%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2#Manacher%E7%AE%97%E6%B3%95)
+
 ## [51. N-Queens](https://leetcode.com/problems/n-queens/) - [Solution](/Problems/51_N_Queens.cpp)
 - 給定`n`，輸出以`n*n`為棋盤的皇后棋擺放法
     - 皇后棋擺放法：同一行、列、斜角不能存在兩個皇后棋
@@ -70,6 +76,10 @@
 - 技巧：前綴和＋二分查找
     - 第`i`個矩形內的點有`(x-a+1)*(y-b+1)`個，根據此對每個點編號
     - 根據前綴和找出隨機選取的數對應的矩形，再計算座標位置
+
+## [532. K-diff Pairs in an Array](https://leetcode.com/problems/k-diff-pairs-in-an-array/submissions/) - [Solution](/Problems/532.%20K-diff%20Pairs%20in%20an%20Array.cpp)
+- 給定數組`nums`與一數`k`，輸出`nums`中數對相差為`k`的數量
+- 技巧：排序＋雙指針
 
 ## [719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/) - [Solution](Problems/719.%20Find%20K-th%20Smallest%20Pair%20Distance.cpp)
 - 給定數組`nums`與一數`k`，輸出其中第`k`小的數對差
