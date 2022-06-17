@@ -110,6 +110,14 @@
         - `local`：由英文小寫字母與`.`、`+`組成，遇`.`忽略，遇`+`忽略其後所有字母符號
         - `domain`：由英文小寫字母與`.`組成，組成不同則不同
 
+## [968. Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/) - [Solution]()
+- 給定二元樹的根節點`root`，輸出所需的最小監視器數量
+    - 監視器：可以監控父節點、自己、子節點
+- 技巧：`dfs`邊遍歷邊更新結果
+    - 若兩個子節點有其中一個沒有被監控，則該節點須安裝監視器（`0`）
+    - 若兩個子節點有其中一個有安裝監視器，則該節點為無安裝但有被監控（`1`）
+    - 其他狀況：沒有被監控（`2`）
+
 ## [1037. Valid Boomerang](https://leetcode.com/problems/valid-boomerang/) - [Solution](/Problems/1037.%20Valid%20Boomerang.cpp)
 - 給定一個點數組`points`，分別代表`x-y`平面上的座標，判斷三點是否不在同一線上
 - 技巧：座標比例判斷
@@ -123,6 +131,12 @@
 ## [1051. Height Checker](https://leetcode.com/problems/height-checker/)
 - 對給定數組`heights`，輸出原數組與排序後數組不同位置的元素數量
 - 技巧：注意`1 <= heights[i] <= 100`，直接使用`vector`存取所有高度數量
+    - 利用前綴和算出該高度的 index 值應為何
+
+## [1089. Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/submissions/) - [Solution](/Problems/1089.%20Duplicate%20Zeros.cpp)
+- 給定長度固定的數組`arr`，將其中`0`的元素複寫，其餘元素順移。
+- 對給定數組`arr`改動，不能改變`arr`長度
+- 技巧：計算最末元素位置＋雙指針
 
 ## [1332. Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/) - [Solution](/Problems/1332.%20Remove%20Palindromic%20Subsequences.cpp)
 - 給定一個僅由`a`、`b`組成的字串`s`，判斷最少需要移除幾個**回文子字串**才能使`s`變為空字串
