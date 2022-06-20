@@ -91,6 +91,14 @@
 - 給一組預定時間，對每一個`[start, end)`輸出當前所有預定時間的最大同時預定數量
 - 技巧：`map`，對`start`加一、對`end`減一
 
+## [820. Short Encoding of Words]() - [Solution](/Problems/820.%20Short%20Encoding%20of%20Words.cpp)
+- 對給定字詞組`words`進行編碼，規則如下，輸出`s`的最小長度
+    - `s`以`#`結尾
+    - 對`indices[i]`，`s`從`indices[i]`到第一個`#`出現前的所有字母形成的字詞＝`words[i]`
+- 技巧：
+    - 從尾端照字典排序
+    - 檢查`words[i-1]`是否為`words[i]`的後綴，若否則`s`新增`words[i-1]`＋`#`
+
 ## [829. Consecutive Numbers Sum](https://leetcode.com/problems/consecutive-numbers-sum/) - [Solution](/Problems/829_Consecutive_Numbers_Sum.cpp)
 - 給定一數`n`，求連續正整數和為`n`的組數
 - 技巧：從`x`到`x+k-1`（`k`個數），和為`n`
