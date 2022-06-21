@@ -98,6 +98,7 @@
 - 技巧：
     - 從尾端照字典排序
     - 檢查`words[i-1]`是否為`words[i]`的後綴，若否則`s`新增`words[i-1]`＋`#`
+    <!-- - 其他做法：字典樹 -->
 
 ## [829. Consecutive Numbers Sum](https://leetcode.com/problems/consecutive-numbers-sum/) - [Solution](/Problems/829_Consecutive_Numbers_Sum.cpp)
 - 給定一數`n`，求連續正整數和為`n`的組數
@@ -146,7 +147,19 @@
 - 對給定數組`arr`改動，不能改變`arr`長度
 - 技巧：計算最末元素位置＋雙指針
 
+## [1108. Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/) - [Solution](/Problems/1108.%20Defanging%20an%20IP%20Address.cpp)
+- 給定`address`，將其中的`.`變為`[.]`
+
 ## [1332. Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/) - [Solution](/Problems/1332.%20Remove%20Palindromic%20Subsequences.cpp)
 - 給定一個僅由`a`、`b`組成的字串`s`，判斷最少需要移除幾個**回文子字串**才能使`s`變為空字串
     - 子字串：**不改變順序**下刪除字符形成的字串
 - 技巧：由於只包含兩種字符，最多只需要刪除兩次（分別刪除同字符組成的子字串）
+
+## [1642. Furthest Building You Can Reach](https://leetcode.com/problems/furthest-building-you-can-reach/) - [Solution](/Problems/1642.%20Furthest%20Building%20You%20Can%20Reach.cpp)
+- 給定大樓高度`heights`、磚塊數量`bricks`、梯子數量`ladders`，輸出最遠可以到第幾棟大樓（從`0`開始）
+    - 若`heights[i]<heights[i+1]`，則可以直接到第`i+1`棟大樓
+    - 若否，則可以使用梯子或高度差對應數量的磚塊
+-　技巧：
+    - 優先使用磚塊
+    - 使用`priority_queue`存取各棟間須使用的磚塊數量
+    - 當磚塊用量超過持有數量，則以梯子取代使用過的磚塊中的最大值
