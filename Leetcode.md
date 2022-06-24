@@ -77,6 +77,10 @@
     - 第`i`個矩形內的點有`(x-a+1)*(y-b+1)`個，根據此對每個點編號
     - 根據前綴和找出隨機選取的數對應的矩形，再計算座標位置
 
+## [515. Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/) - [Solution](/Problems/515.%20Find%20Largest%20Value%20in%20Each%20Tree%20Row.cpp)
+- 給定一個二元數的節點`root`，輸出該樹由上到下每一層的最大元素
+- 技巧：dfs＋高度紀錄
+
 ## [532. K-diff Pairs in an Array](https://leetcode.com/problems/k-diff-pairs-in-an-array/submissions/) - [Solution](/Problems/532.%20K-diff%20Pairs%20in%20an%20Array.cpp)
 - 給定數組`nums`與一數`k`，輸出`nums`中數對相差為`k`的數量
 - 技巧：排序＋雙指針
@@ -154,6 +158,15 @@
 - 給定一個僅由`a`、`b`組成的字串`s`，判斷最少需要移除幾個**回文子字串**才能使`s`變為空字串
     - 子字串：**不改變順序**下刪除字符形成的字串
 - 技巧：由於只包含兩種字符，最多只需要刪除兩次（分別刪除同字符組成的子字串）
+
+## [1354. Construct Target Array With Multiple Sums]() - [Solution](/Problems/1354.%20Construct%20Target%20Array%20With%20Multiple%20Sums.cpp)
+- 給定一數組`target`，判斷是否可以由一串元素皆為`1`的數組`arr`演化為`target`，演化的定義如下：
+    - 令`arr`的所有元素和為`x`
+    - 在`arr`中其中一個元素變為`x`
+    - 重複以上步驟
+- 技巧：逆推
+    - 如果存在很大的數（即，對同一位置操作多次），在該元素值小於當前其餘元素總和前都會是最大值，因此**使用`%`（取餘數）**
+    - 注意`sum`有可能會溢位：使用`long long`
 
 ## [1642. Furthest Building You Can Reach](https://leetcode.com/problems/furthest-building-you-can-reach/) - [Solution](/Problems/1642.%20Furthest%20Building%20You%20Can%20Reach.cpp)
 - 給定大樓高度`heights`、磚塊數量`bricks`、梯子數量`ladders`，輸出最遠可以到第幾棟大樓（從`0`開始）
