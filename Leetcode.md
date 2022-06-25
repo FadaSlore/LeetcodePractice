@@ -85,6 +85,12 @@
 - 給定數組`nums`與一數`k`，輸出`nums`中數對相差為`k`的數量
 - 技巧：排序＋雙指針
 
+## [665. Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/) - [Solution](/Problems/665.%20Non-decreasing%20Array.cpp)
+- 給定數組`nums`，判斷是否可以在**最多改變一個元素**的前提下，使該數組形成非遞減序列
+- 技巧：列舉可能回傳`false`的情況
+    1. 出現兩組`nums[i]>nums[i+1]`
+    2. 僅出現一組`nums[i]>nums[i+1]`，但無法僅改變一個元素獲得非遞減序列：Ex. `[3, 4, 1, 2]`
+
 ## [719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/) - [Solution](Problems/719.%20Find%20K-th%20Smallest%20Pair%20Distance.cpp)
 - 給定數組`nums`與一數`k`，輸出其中第`k`小的數對差
     - 數對差：`nums`中選取兩數的距離
@@ -176,3 +182,10 @@
     - 優先使用磚塊
     - 使用`priority_queue`存取各棟間須使用的磚塊數量
     - 當磚塊用量超過持有數量，則以梯子取代使用過的磚塊中的最大值
+
+## [Offer II 091. 粉刷房子]() - [Solution](/Problems/Offer%20II%20091.%20%E7%B2%89%E5%88%B7%E6%88%BF%E5%AD%90.cpp)
+- 給定數組`costs`，`costs[i][j]`代表第`i`棟房子塗上第`j`個顏色的花費，求滿足**相鄰不同色**的最小花費
+    - 顏色有三種：紅色、藍色、綠色
+- 技巧：動態規劃
+    - 在計算顏色的時候**使用分別`+1`、`+2`再對`3`取餘數的方式**保證選到的是不同顏色
+
