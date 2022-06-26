@@ -91,6 +91,14 @@
     1. 出現兩組`nums[i]>nums[i+1]`
     2. 僅出現一組`nums[i]>nums[i+1]`，但無法僅改變一個元素獲得非遞減序列：Ex. `[3, 4, 1, 2]`
 
+## [710. Random Pick with Blacklist](https://leetcode.com/problems/random-pick-with-blacklist/) - [Solution](/Problems/710.%20Random%20Pick%20with%20Blacklist.cpp)
+- 給定一數`n`與數組`blacklist`，`pick`等機率回傳`[0, n-1]`區間內的白名單數字
+- 技巧：隨機選取`[0, (n-1)-(blacklist.size())]`區間內的數＋**映射**
+    - `unordered_set`（hash table）存取黑名單
+    - `unordered_map`存取黑名單→白名單的映射
+    - 選取的數字若在黑名單，則使用映射轉為白名單數字
+
+
 ## [719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/) - [Solution](Problems/719.%20Find%20K-th%20Smallest%20Pair%20Distance.cpp)
 - 給定數組`nums`與一數`k`，輸出其中第`k`小的數對差
     - 數對差：`nums`中選取兩數的距離
@@ -173,6 +181,10 @@
 - 技巧：逆推
     - 如果存在很大的數（即，對同一位置操作多次），在該元素值小於當前其餘元素總和前都會是最大值，因此**使用`%`（取餘數）**
     - 注意`sum`有可能會溢位：使用`long long`
+## [1423. Maximum Points You Can Obtain from Cards]() - [Solution](/Problems/1423.%20Maximum%20Points%20You%20Can%20Obtain%20from%20Cards.cpp)
+- 給定數組`cardPoints`與一數`k`，`cardPoints[i]`代表第`i`張牌的分數。每一步可以拿取最末或最前的牌，輸出拿取`k`張牌可達到的最大分數
+- 技巧：
+    - 滑動窗口：剩下的一定是`cardPoints.size()-k`張**連續**卡牌
 
 ## [1642. Furthest Building You Can Reach](https://leetcode.com/problems/furthest-building-you-can-reach/) - [Solution](/Problems/1642.%20Furthest%20Building%20You%20Can%20Reach.cpp)
 - 給定大樓高度`heights`、磚塊數量`bricks`、梯子數量`ladders`，輸出最遠可以到第幾棟大樓（從`0`開始）
