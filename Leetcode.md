@@ -63,6 +63,11 @@
 - 技巧：預先計算好**二維**前綴和，再根據給的行列 index 求出對應值
     - 注意更新及回傳的加減（加上沒有的、減去重疊的）— 集合概念
 
+## [324. Wiggle Sort II](https://leetcode.com/problems/wiggle-sort-ii/) - [Solution](Problems/324.%20Wiggle%20Sort%20II.cpp)
+- 給定數組`nums`，將其改為符合「`nums[0]<nums[1]>nums[2]<nums[3]...`」條件的數組
+- 技巧：複製另一個數組排序，根據大小重新填寫`nums`
+    - [其他方法](https://leetcode.cn/problems/wiggle-sort-ii/solution/bai-dong-pai-xu-ii-by-leetcode-solution-no0s/)
+
 ## [450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) - [Solution](/Problems/450_Delete_Node_in_a_BST.cpp)
 - 給定一個二元樹根節點`root`與一數`key`，若`key`存在於此二元數內，則刪除並重組二元樹，回傳新的根節點
 - 技巧：回溯法，在過程中記錄所尋找的點的**父節點**
@@ -203,6 +208,10 @@
     - 優先使用磚塊
     - 使用`priority_queue`存取各棟間須使用的磚塊數量
     - 當磚塊用量超過持有數量，則以梯子取代使用過的磚塊中的最大值
+
+## [1647. Minimum Deletions to Make Character Frequencies Unique](https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/) - [Solution](Problems/1647.%20Minimum%20Deletions%20to%20Make%20Character%20Frequencies%20Unique.cpp)
+- 給定僅包含小寫字母的字串`s`，求最少需要刪掉幾個字符才能達成「`s`內每一個字母出現次數皆不同」的條件
+- 技巧：計數＋排序＋貪心
 
 ## [Offer II 091. 粉刷房子]() - [Solution](/Problems/Offer%20II%20091.%20%E7%B2%89%E5%88%B7%E6%88%BF%E5%AD%90.cpp)
 - 給定數組`costs`，`costs[i][j]`代表第`i`棟房子塗上第`j`個顏色的花費，求滿足**相鄰不同色**的最小花費
