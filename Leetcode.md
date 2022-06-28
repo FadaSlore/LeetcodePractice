@@ -48,6 +48,11 @@
 ## [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) - [Solution](/Problems/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted.cpp)
 - 給定數組`numbers`與一數`target`，回傳`numbers`中兩數和為`target`的 index：**唯一解**
 
+## [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/submissions/) - [Solution](/Problems/215.%20Kth%20Largest%20Element%20in%20an%20Array.cpp)
+- 給定數組`nums`與一數`k`，輸出`nums`中第`k`大的數
+    - 等同求出第`n-k+1`小的數
+- 技巧：快速排序法（二分查找）
+
 ## [303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) - [Solution](/Problems/303_Range_Sum_Query_Immutable.cpp)
 - 給定一數組`nums`，實現求**區間**和的 function
 - 技巧：預先計算好所有前綴和，再根據給的 index 求出對應值
@@ -76,6 +81,10 @@
 - 技巧：前綴和＋二分查找
     - 第`i`個矩形內的點有`(x-a+1)*(y-b+1)`個，根據此對每個點編號
     - 根據前綴和找出隨機選取的數對應的矩形，再計算座標位置
+
+## [513. Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/) - [Solution](/Problems/513.%20Find%20Bottom%20Left%20Tree%20Value.cpp)
+- 給定二元樹的根節點`root`，找出該樹最底層最左邊的元素值
+- 技巧：dfs / bfs
 
 ## [515. Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/) - [Solution](/Problems/515.%20Find%20Largest%20Value%20in%20Each%20Tree%20Row.cpp)
 - 給定一個二元數的節點`root`，輸出該樹由上到下每一層的最大元素
