@@ -68,6 +68,12 @@
 - 技巧：複製另一個數組排序，根據大小重新填寫`nums`
     - [其他方法](https://leetcode.cn/problems/wiggle-sort-ii/solution/bai-dong-pai-xu-ii-by-leetcode-solution-no0s/)
 
+## [406. Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/) - [Solution](Problems/406.%20Queue%20Reconstruction%20by%20Height.cpp)
+- 給定`people`，其中`people[i]=[h, k]`代表第`i`個人身高為`h`、`[0, i-1]`區間的人中，滿足身高`>=h`的有`k`個人。依照給定的資訊回傳正確的排列。
+- 技巧：
+    - 排序方式：身高由小到大，相同者`k`較大較前
+    - 根據排序後的`people`的`k`資訊填入：由左到右第`k+1`個空位
+
 ## [450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) - [Solution](/Problems/450_Delete_Node_in_a_BST.cpp)
 - 給定一個二元樹根節點`root`與一數`key`，若`key`存在於此二元數內，則刪除並重組二元樹，回傳新的根節點
 - 技巧：回溯法，在過程中記錄所尋找的點的**父節點**
@@ -98,6 +104,10 @@
 ## [532. K-diff Pairs in an Array](https://leetcode.com/problems/k-diff-pairs-in-an-array/submissions/) - [Solution](/Problems/532.%20K-diff%20Pairs%20in%20an%20Array.cpp)
 - 給定數組`nums`與一數`k`，輸出`nums`中數對相差為`k`的數量
 - 技巧：排序＋雙指針
+
+## [535. Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/) - [Solution](/Problems/535.%20Encode%20and%20Decode%20TinyURL.cpp)
+- 對`longUrl`編碼為`shortUrl`、對`shortUrl`解碼為`longUrl`
+- 技巧：hash table 應用
 
 ## [665. Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/) - [Solution](/Problems/665.%20Non-decreasing%20Array.cpp)
 - 給定數組`nums`，判斷是否可以在**最多改變一個元素**的前提下，使該數組形成非遞減序列
