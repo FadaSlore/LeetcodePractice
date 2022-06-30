@@ -81,6 +81,11 @@
     2. 對`key`節點**左**子樹的所有節點尋找最大值節點（最**右**葉節點）
     - 需注意的是，當`change_parent`（上述之父節點）與`key`節點（`target`）為同一個節點時，轉換的左右子樹會不同
 
+## [462. Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) - [Solution](Problems/462.%20Minimum%20Moves%20to%20Equal%20Array%20Elements%20II.cpp)
+- 給定數組`nums`，求使得數組內所有數相等的最少操作次數
+    - 一次操作定義為對數組內其中一個數`+1`或`-1`
+- 技巧：**取中位數**而非平均數
+
 ## [478. Generate Random Point in a Circle](https://leetcode.com/problems/generate-random-point-in-a-circle/) - [Solution](/Problems/478.%20Generate%20Random%20Point%20in%20a%20Circle.cpp)
 - 給定圓的半徑和圓心位置，實現產生圓內均勻隨機點的函式
 - 技巧：`<random>`
@@ -191,6 +196,10 @@
 
 ## [1108. Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/) - [Solution](/Problems/1108.%20Defanging%20an%20IP%20Address.cpp)
 - 給定`address`，將其中的`.`變為`[.]`
+
+## [1175. Prime Arrangements](https://leetcode.com/problems/prime-arrangements/) - [Solution](Problems/1175.%20Prime%20Arrangements.cpp)
+- 給定數字`n`，求滿足「質數位置為質數值」的排序方法數（對`1e9+7`取餘數）
+- 技巧：假設有`x`個質數，答案為`(x)!(n-x)!`
 
 ## [1332. Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/) - [Solution](/Problems/1332.%20Remove%20Palindromic%20Subsequences.cpp)
 - 給定一個僅由`a`、`b`組成的字串`s`，判斷最少需要移除幾個**回文子字串**才能使`s`變為空字串
