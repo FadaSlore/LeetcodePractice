@@ -53,6 +53,11 @@
     - 等同求出第`n-k+1`小的數
 - 技巧：快速排序法（二分查找）
 
+## [241. Different Ways to Add Parentheses]() - [Solution](Problems/241.%20Different%20Ways%20to%20Add%20Parentheses.cpp)
+- 給定運算式`expression`，輸出對任意運算加入括號可能會產生的所有結果
+- 技巧：動態規劃
+    - `dp[left][right]`代表從`operation[left]`到`operation[right]`會產生的不同結果
+
 ## [303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) - [Solution](/Problems/303_Range_Sum_Query_Immutable.cpp)
 - 給定一數組`nums`，實現求**區間**和的 function
 - 技巧：預先計算好所有前綴和，再根據給的 index 求出對應值
@@ -196,6 +201,12 @@
 
 ## [1108. Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/) - [Solution](/Problems/1108.%20Defanging%20an%20IP%20Address.cpp)
 - 給定`address`，將其中的`.`變為`[.]`
+
+## [1710. Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck/) - [Solution](Problems/1710.%20Maximum%20Units%20on%20a%20Truck.cpp)
+- 給定數組`boxTypes`（`boxTypes[i]=[numberOfBoxes, numberOfUnitsPerBox]`）與一數`truckSize`代表箱子數，回傳最大可裝載數量
+    - `numberOfBoxes`：第`i`種物品最多可有幾箱
+    - `numberOfUnitsPerBox`：第`i`種物品一箱可放的數量
+- 技巧：排序＋動態規劃（greedy）
 
 ## [1175. Prime Arrangements](https://leetcode.com/problems/prime-arrangements/) - [Solution](Problems/1175.%20Prime%20Arrangements.cpp)
 - 給定數字`n`，求滿足「質數位置為質數值」的排序方法數（對`1e9+7`取餘數）
