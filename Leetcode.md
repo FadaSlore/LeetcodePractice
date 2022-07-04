@@ -37,6 +37,17 @@
     - 每一層的第`j`個位置只和下一層的第`j`、`j+1`有關
     - 優化：由底向頂更改給定的變數`triangle`，空間複雜度為`0`
 
+## [135. Candy](https://leetcode.com/problems/candy/) - [Solution](Problems/135.%20Candy.cpp)
+- 給定數組`ratings`，代表每個小孩的評分，回傳滿足以下條件的最小總糖果數
+    1. 每個小孩至少會拿到`1`個糖果
+    2. 相鄰評分更高的小孩會拿到較多糖果（可以同分，有一位拿到較少糖果）
+- 技巧：遍歷＋紀錄當前升降序與糖果數
+    - 若第`i`位同學評分比第`i-1`位同學高，則多拿一個糖果（`temp+1`）
+    - 在遞減序列中，給第`i`位同學一個糖果，序列中的前面同學都多拿一個
+        - 當前遞減序列的第一位置優先歸類為前一遞增序列
+        - 當該同學所需要給的糖果數量`>`已經給的糖果數量，則將其納入遞減序列中
+            - 檢查當
+
 ## [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) - [Solution](/Problems/160.%20Intersection%20of%20Two%20Linked%20Lists.cpp)
 - 給定兩個 list 的 head：`headA`、`headB`，回傳相交的起始點，若無相交則回傳`NULL`
 - 技巧：雙指針（`a`、`b`），到尾則從另一個的 list 的`head`再繼續。假設`ListA`長度為`m`、`ListB`長度為`n`：
@@ -211,6 +222,10 @@
 ## [1175. Prime Arrangements](https://leetcode.com/problems/prime-arrangements/) - [Solution](Problems/1175.%20Prime%20Arrangements.cpp)
 - 給定數字`n`，求滿足「質數位置為質數值」的排序方法數（對`1e9+7`取餘數）
 - 技巧：假設有`x`個質數，答案為`(x)!(n-x)!`
+
+## [1200. Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/) - [Solution](Problems/1200.%20Minimum%20Absolute%20Difference.cpp)
+- 給定數組`nums`，求所有具有最小絕對差值的數對（升序排列）
+- 技巧：排序＋遍歷
 
 ## [1332. Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/) - [Solution](/Problems/1332.%20Remove%20Palindromic%20Subsequences.cpp)
 - 給定一個僅由`a`、`b`組成的字串`s`，判斷最少需要移除幾個**回文子字串**才能使`s`變為空字串
