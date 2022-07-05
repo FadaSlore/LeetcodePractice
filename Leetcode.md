@@ -37,6 +37,10 @@
     - 每一層的第`j`個位置只和下一層的第`j`、`j+1`有關
     - 優化：由底向頂更改給定的變數`triangle`，空間複雜度為`0`
 
+## [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/submissions/) - [Solution](Problems/128.%20Longest%20Consecutive%20Sequence.cpp)
+- 給定未排序數組`nums`，輸出其中連續數組的最長長度
+- 技巧：使用`unordered_set`存取＋計算長度
+
 ## [135. Candy](https://leetcode.com/problems/candy/) - [Solution](Problems/135.%20Candy.cpp)
 - 給定數組`ratings`，代表每個小孩的評分，回傳滿足以下條件的最小總糖果數
     1. 每個小孩至少會拿到`1`個糖果
@@ -149,6 +153,12 @@
     - 數對差：`nums`中選取兩數的距離
 - 技巧：排序後，二分查找＋雙指針
     - 對每一個`mid`，計算小於`mid`的數對差有幾個
+
+## [729. My Calendar I](https://leetcode.com/problems/my-calendar-i/) - [Solution](Problems/729.%20My%20Calendar%20I.cpp)
+- 對給定的預定時間回傳是否有重複預定的情況
+- 技巧：使用`set`紀錄、查找
+    - [其他做法](https://leetcode.cn/problems/my-calendar-i/solution/wo-de-ri-cheng-an-pai-biao-i-by-leetcode-nlxr/)
+
 
 ## [732. My Calendar III](https://leetcode.com/problems/my-calendar-iii/) - [Solution](/Problems/732.%20My%20Calendar%20III.cpp)
 - 給一組預定時間，對每一個`[start, end)`輸出當前所有預定時間的最大同時預定數量
