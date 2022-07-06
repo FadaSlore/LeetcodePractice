@@ -118,6 +118,10 @@
     - 第`i`個矩形內的點有`(x-a+1)*(y-b+1)`個，根據此對每個點編號
     - 根據前綴和找出隨機選取的數對應的矩形，再計算座標位置
 
+## [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) - [Solution](Problems/509.%20Fibonacci%20Number.cpp)
+- 給定`n`，算出`F(n)`
+    - `F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2)`
+
 ## [513. Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/) - [Solution](/Problems/513.%20Find%20Bottom%20Left%20Tree%20Value.cpp)
 - 給定二元樹的根節點`root`，找出該樹最底層最左邊的元素值
 - 技巧：dfs / bfs
